@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITS 365 Perceptron_Web_HW</title>
+</head>
+<style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 60px);
+            gap: 5px;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .cell {
+            width: 60px;
+            height: 60px;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: black;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+<body>
+    <h1>Perceptron: Draw L or T</h1>
+
+    <div class="grid" id="grid"></div>
+
+    <button onclick="trainModel()">Train Model</button>
+    <button onclick="predictGrid()">Predict Drawing</button>
+    <button onclick="clearGrid()">Clear</button>
+
+    <h2 id="output">Draw something!</h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
